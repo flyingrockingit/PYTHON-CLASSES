@@ -1,17 +1,26 @@
-import random
+# Define a class Robot
+class Robot:
+    species = "Artificial Intelligence Robot"
+    
+    def __init__(self, name, model, year):
+        self.name = name       
+        self.model = model      
+        self.year = year        
+    
+    def introduce(self):
+        print(f"Hello! I am {self.name}, model {self.model}, created in {self.year}.")
+        print(f"I am a {Robot.species}.")
+    
+    def perform_action(self, action):
+        print(f"{self.name} is now {action}.")
 
-class hotel_registration:
-    def __init__(self, guest_names, room_type, booking_id=None):
-        self.guest_names = list(guest_names)     
-        self.room_type = room_type
-        self.booking_id = booking_id if booking_id else str(random.randint(100000, 999999))
+robot1 = Robot("RoboMax", "X100", 2025)
+robot2 = Robot("AI-Buddy", "A200", 2024)
 
-    def display(self):
-        print(f"\nGuests: {self.guest_names}\nRoom Type: {self.room_type}\nBooking ID: {self.booking_id}")
+robot1.introduce()
+robot1.perform_action("dancing")
 
+print()  
 
-guest1 = hotel_registration(("John Smith", "Emily Smith"), "Deluxe")
-guest2 = hotel_registration(("Alice Brown",), "Suite")
-
-guest1.display()
-guest2.display()
+robot2.introduce()
+robot2.perform_action("singing")
