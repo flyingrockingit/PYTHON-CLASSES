@@ -1,8 +1,3 @@
-x= int(input ("enter the value of x:"))
-y= int (input ("enter the value of y:"))
-
-temp=x
-x=y
-y=temp
-print (f"x after swapping:{x}")
-print (f"y after swapping:{y}")
+file = open("CS CODE.txt" ,"r")
+print (f"Read the content in the TXT file \n{file.read(76)}")
+file.close()
