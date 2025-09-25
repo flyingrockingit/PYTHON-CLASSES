@@ -31,7 +31,7 @@ file.close()
 
 # Task 5: Loop through all lines one by one
 file = open("SampleFile 2.txt", "r")
-print("\n\n**All lines printed one by one:**")
+print("\n**All lines printed one by one:**")
 for line in file:
     print(line, end="")
 file.close()
