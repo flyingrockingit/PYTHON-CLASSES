@@ -1,6 +1,9 @@
-import datetime
-current_time=datetime.datetime.now()
-print(f"The time is:{current_time}")
+import os
+os.remove("newFILE.txt")
+print ("Checking if the file exists...")
+if os.path.exists("newFILE.txt"):
+    print("This file exists already")
+else:
+    print ("This file doesn't exist")
 
-import calendar
-print(f"\n{calendar.calendar(2007)}")
+
