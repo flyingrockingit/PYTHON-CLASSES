@@ -1,11 +1,28 @@
-total_classes = int(input("Enter total number of classes held: "))
-attended_classes = int(input("Enter number of classes you attended: "))
+# Step 1: 
+with open("FILESAMPLE2.txt", "a") as file:
+    file.write("\nHello, my name is Avni. I am learning File Handling - Python currently.")
 
-attendance = (attended_classes / total_classes) * 100
+# Step 2:
+with open("FILESAMPLE2.txt", "r") as file:   
+    content = file.read()          
+    words = content.split()        
+    print("Words in the file:", words)
 
-print(f"\nYour attendance is: {attendance:.2f}%")
-
-if attendance >= 75:
-    print("✅ You are eligible to sit for the exam.")
+# Step 3: 
+import os
+print("Checking if the file exists...")
+if os.path.exists("mMyFILE.txt"):
+    print("This file exists already")
 else:
-    print("❌ You are NOT eligible to sit for the exam.")
+    print("This file does not exist")
+
+# Step 4:
+with open("m_MYFile.txt", "a") as file:  
+        file.write("\nHello, my name is AAR. This is my new created file.")
+
+#Step 5:
+if os.path.exists("Sample_File.txt"):
+    os.remove("Sample_File.txt")
+    print("Sample_File.txt deleted successfully.")
+else:
+    print("Sample_File.txt does not exist.")
